@@ -1,0 +1,7 @@
+<h1>Categories/ # Tags</h1>
+<% @tags.each do |name,num| %>
+  <p><%= name %>/ #<%= num %></p>
+<% end %>
+<br>
+<h1><span class="blue">Tags</span> distribution</h1>
+<%= pie_chart @tags %>

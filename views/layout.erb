@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="ut8">
+  <title>MIQ API Visualiser</title>
+  <link type="text/css" href="/main.css" rel="stylesheet">
+  <link type="text/css" href="/normalize.css" rel="stylesheet">
+  <script src="//www.google.com/jsapi"></script>
+  <script src="chartkick.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+  <header>
+    <hgroup>
+    <h1><a href="/"><span class="blue">M</span><span class="dark-gray">AV</span></a></h1>
+    <h2><span class="blue">ManageIQ</span> <span class="dark-gray">API Visualiser</span></h2>
+    </hgroup>
+  </header>
+  
+  <div id="main">
+    <% if flash[:error] %>
+        <span class="flash error"><%= flash[:error]%></span>
+    <% end %>
+    <%= yield %>
+  </div>
+
+  <footer>
+    <p><small>A micro-app demonstrating the <a href="http://manageiq.org">ManageIQ API</a> and <a href="http://www.chartkick.com">Chartkick</a>. Available on <a href="https://github.com/jockey10/miq-api-visuals/">Github</small></p>
+  </footer>
+  </body>
+</html>
